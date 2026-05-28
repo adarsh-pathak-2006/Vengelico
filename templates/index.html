@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vengelico Jewellery</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Vengelico</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Vengelico Jewellery</h1>
+        <p>Simple, elegant pieces made for everyday shine.</p>
+        <a href="shop.html" class="button">Shop Now</a>
+    </section>
+
+    <section class="section">
+        <h2>Featured Pieces</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Gold Ring</h3>
+                <p>Classic shine for daily wear.</p>
+            </div>
+            <div class="product">
+                <h3>Pearl Necklace</h3>
+                <p>Soft elegance for special moments.</p>
+            </div>
+            <div class="product">
+                <h3>Silver Bracelet</h3>
+                <p>Minimal style with a clean finish.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Vengelico Jewellery</p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Vengelico</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Vengelico</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="section narrow">
+        <h1>Contact Us</h1>
+        <p>Email: hello@vengelico.com</p>
+        <p>Phone: +1 234 567 890</p>
+
+        <form id="contact-form">
+            <input type="text" placeholder="Your name">
+            <input type="email" placeholder="Your email">
+            <textarea rows="5" placeholder="Your message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Vengelico Jewellery</p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #fffaf5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #111;
+}
+
+.logo {
+    color: #f4c95d;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #f4c95d;
+}
+
+.hero {
+    padding: 90px 8%;
+    text-align: center;
+    background: #f7eadc;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.button,
+button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #111;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+    background: #333;
+}
+
+.section {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.narrow {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.product {
+    padding: 24px;
+    background: white;
+    border: 1px solid #ead8c4;
+    border-radius: 6px;
+}
+
+.product h3 {
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #9c6b14;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 14px;
+    border: 1px solid #d8c3ad;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #111;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 14px;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        margin: 6px 8px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
