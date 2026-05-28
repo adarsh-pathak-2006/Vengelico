@@ -1,33 +1,40 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Vengelico</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <nav class="navbar">
-        <a href="index.html" class="logo">Vengelico</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+{% extends 'base.html' %}
 
-    <section class="section narrow">
-        <h1>About Vengelico</h1>
-        <p>Vengelico is a simple jewellery brand focused on clean designs, soft details, and timeless pieces.</p>
-        <p>Our goal is to make jewellery that feels special without being complicated.</p>
-    </section>
+{% block title %}About - Vengelico{% endblock %}
 
-    <footer>
-        <p>&copy; 2026 Vengelico Jewellery</p>
-    </footer>
+{% block content %}
+<section class="page-hero reveal">
+    <p class="eyebrow">Our story</p>
+    <h1>Jewellery made for the moments you remember.</h1>
+    <p>Vengelico began with a simple idea: create pieces that feel refined, wearable, and deeply personal.</p>
+</section>
 
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
+<section class="split-section reveal">
+    <div>
+        <h2>Design with restraint. Shine with intention.</h2>
+        <p>Our collections focus on clean shapes, graceful details, and finishes that pair beautifully with both daily outfits and special occasions.</p>
+    </div>
+    <article class="story-card">
+        <p class="big-number">2026</p>
+        <p>Founded for people who want jewellery that feels premium without feeling loud.</p>
+    </article>
+</section>
+
+<section class="section soft reveal">
+    <p class="eyebrow">What we care about</p>
+    <div class="values">
+        <article>
+            <h3>Timeless Style</h3>
+            <p>Pieces that stay beautiful beyond trends.</p>
+        </article>
+        <article>
+            <h3>Daily Comfort</h3>
+            <p>Lightweight designs you can wear with ease.</p>
+        </article>
+        <article>
+            <h3>Giftable Detail</h3>
+            <p>Every order is packed to feel memorable.</p>
+        </article>
+    </div>
+</section>
+{% endblock %}

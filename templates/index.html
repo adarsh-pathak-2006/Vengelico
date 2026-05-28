@@ -1,51 +1,90 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vengelico Jewellery</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <nav class="navbar">
-        <a href="index.html" class="logo">Vengelico</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+{% extends 'base.html' %}
 
-    <section class="hero">
+{% block title %}Vengelico Jewellery{% endblock %}
+
+{% block content %}
+<section class="hero reveal">
+    <div class="hero-content">
+        <p class="eyebrow">Fine jewellery for everyday luxury</p>
         <h1>Vengelico Jewellery</h1>
-        <p>Simple, elegant pieces made for everyday shine.</p>
-        <a href="shop.html" class="button">Shop Now</a>
-    </section>
-
-    <section class="section">
-        <h2>Featured Pieces</h2>
-        <div class="products">
-            <div class="product">
-                <h3>Gold Ring</h3>
-                <p>Classic shine for daily wear.</p>
-            </div>
-            <div class="product">
-                <h3>Pearl Necklace</h3>
-                <p>Soft elegance for special moments.</p>
-            </div>
-            <div class="product">
-                <h3>Silver Bracelet</h3>
-                <p>Minimal style with a clean finish.</p>
-            </div>
+        <p>Elegant rings, necklaces, bracelets, and earrings designed to make simple moments feel unforgettable.</p>
+        <div class="hero-actions">
+            <a href="{% url 'shop' %}" class="button">Explore Collection</a>
+            <a href="{% url 'about' %}" class="button ghost">Our Story</a>
         </div>
-    </section>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 Vengelico Jewellery</p>
-    </footer>
+    <div class="hero-showcase" aria-label="Featured jewellery display">
+        <article class="jewel-card ring-card">
+            <span>01</span>
+            <h3>Signature Ring</h3>
+            <p>Polished gold with a timeless curve.</p>
+        </article>
+        <article class="jewel-card pearl-card">
+            <span>02</span>
+            <h3>Pearl Drop</h3>
+            <p>Soft shine for elegant evenings.</p>
+        </article>
+    </div>
+</section>
 
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
+<section class="section reveal">
+    <p class="eyebrow">Curated collections</p>
+    <h2>Jewellery that speaks quietly but shines loudly.</h2>
+    <div class="category-grid">
+        <article class="category">
+            <span>Rings</span>
+            <p>Stackable, statement, and bridal-inspired pieces.</p>
+        </article>
+        <article class="category">
+            <span>Necklaces</span>
+            <p>Layered chains, pearls, and delicate pendants.</p>
+        </article>
+        <article class="category">
+            <span>Bracelets</span>
+            <p>Minimal wristwear with a refined finish.</p>
+        </article>
+        <article class="category">
+            <span>Earrings</span>
+            <p>From daily studs to evening sparkle.</p>
+        </article>
+    </div>
+</section>
+
+<section class="section soft reveal">
+    <p class="eyebrow">Best sellers</p>
+    <h2>Pieces customers keep coming back for.</h2>
+    <div class="products">
+        <article class="product">
+            <div class="product-art gold"></div>
+            <h3>Aurelia Gold Ring</h3>
+            <p>Classic shine for daily wear.</p>
+            <p class="price">$120</p>
+        </article>
+        <article class="product">
+            <div class="product-art pearl"></div>
+            <h3>Luna Pearl Necklace</h3>
+            <p>Soft elegance for special moments.</p>
+            <p class="price">$180</p>
+        </article>
+        <article class="product">
+            <div class="product-art silver"></div>
+            <h3>Serene Silver Bracelet</h3>
+            <p>Clean lines with a modern finish.</p>
+            <p class="price">$95</p>
+        </article>
+    </div>
+</section>
+
+<section class="split-section reveal">
+    <div>
+        <p class="eyebrow">The Vengelico promise</p>
+        <h2>Made to feel personal from the first glance.</h2>
+    </div>
+    <div class="promise-list">
+        <p>Premium finishes chosen for lasting shine.</p>
+        <p>Comfortable designs for real everyday wear.</p>
+        <p>Gift-ready packaging for every order.</p>
+    </div>
+</section>
+{% endblock %}

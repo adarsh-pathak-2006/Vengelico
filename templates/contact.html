@@ -1,40 +1,29 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Vengelico</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <nav class="navbar">
-        <a href="index.html" class="logo">Vengelico</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+{% extends 'base.html' %}
 
-    <section class="section narrow">
-        <h1>Contact Us</h1>
+{% block title %}Contact - Vengelico{% endblock %}
+
+{% block content %}
+<section class="page-hero reveal">
+    <p class="eyebrow">Visit or write</p>
+    <h1>Let us help you find the right sparkle.</h1>
+    <p>Ask about sizing, gifts, styling, or custom recommendations from the Vengelico team.</p>
+</section>
+
+<section class="contact-layout reveal">
+    <article class="contact-info">
+        <h2>Contact details</h2>
         <p>Email: hello@vengelico.com</p>
         <p>Phone: +1 234 567 890</p>
+        <p>Studio: 18 Velvet Lane, New York</p>
+        <p>Hours: Monday to Saturday, 10 AM - 7 PM</p>
+    </article>
 
-        <form id="contact-form">
-            <input type="text" placeholder="Your name">
-            <input type="email" placeholder="Your email">
-            <textarea rows="5" placeholder="Your message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Vengelico Jewellery</p>
-    </footer>
-
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
+    <form id="contact-form" class="contact-form">
+        <input type="text" placeholder="Your name">
+        <input type="email" placeholder="Your email">
+        <textarea rows="5" placeholder="Your message"></textarea>
+        <button type="submit">Send Message</button>
+        <p class="form-message"></p>
+    </form>
+</section>
+{% endblock %}

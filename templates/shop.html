@@ -1,49 +1,44 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - Vengelico</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <nav class="navbar">
-        <a href="index.html" class="logo">Vengelico</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+{% extends 'base.html' %}
 
-    <section class="section">
-        <h1>Shop Jewellery</h1>
-        <div class="products">
-            <div class="product">
-                <h3>Gold Ring</h3>
-                <p class="price">$120</p>
-            </div>
-            <div class="product">
-                <h3>Pearl Necklace</h3>
-                <p class="price">$180</p>
-            </div>
-            <div class="product">
-                <h3>Silver Bracelet</h3>
-                <p class="price">$95</p>
-            </div>
-            <div class="product">
-                <h3>Diamond Earrings</h3>
-                <p class="price">$250</p>
-            </div>
-        </div>
-    </section>
+{% block title %}Shop - Vengelico{% endblock %}
 
-    <footer>
-        <p>&copy; 2026 Vengelico Jewellery</p>
-    </footer>
+{% block content %}
+<section class="page-hero reveal">
+    <p class="eyebrow">The collection</p>
+    <h1>Shop pieces with quiet drama and lasting polish.</h1>
+    <p>Choose from refined rings, pearl accents, silver essentials, and evening-ready diamonds.</p>
+</section>
 
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
+<section class="section reveal">
+    <div class="products large">
+        <article class="product">
+            <div class="product-art gold"></div>
+            <h3>Aurelia Gold Ring</h3>
+            <p>Polished gold ring with a clean silhouette.</p>
+            <p class="price">$120</p>
+            <button type="button">Add to Bag</button>
+        </article>
+        <article class="product">
+            <div class="product-art pearl"></div>
+            <h3>Luna Pearl Necklace</h3>
+            <p>Delicate chain with a luminous pearl drop.</p>
+            <p class="price">$180</p>
+            <button type="button">Add to Bag</button>
+        </article>
+        <article class="product">
+            <div class="product-art silver"></div>
+            <h3>Serene Silver Bracelet</h3>
+            <p>Minimal bracelet made for daily styling.</p>
+            <p class="price">$95</p>
+            <button type="button">Add to Bag</button>
+        </article>
+        <article class="product">
+            <div class="product-art diamond"></div>
+            <h3>Celeste Diamond Earrings</h3>
+            <p>Elegant sparkle for dinners and celebrations.</p>
+            <p class="price">$250</p>
+            <button type="button">Add to Bag</button>
+        </article>
+    </div>
+</section>
+{% endblock %}
