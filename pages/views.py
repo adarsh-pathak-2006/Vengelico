@@ -23,3 +23,5 @@ def submit(request):
         )
     return redirect("contact")
 
+def cart(request):
+    return render(request, "cart.html")

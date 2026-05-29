@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Vengelico</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'home' %}" class="logo">Vengelico</a>
+        <button class="menu-btn" type="button" aria-label="Open menu">Menu</button>
+        <div class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'shop' %}">Shop</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'cart' %}">Cart</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero cart-hero reveal">
+            <p class="eyebrow">Shopping bag</p>
+            <h1>Your selected pieces are waiting.</h1>
+            <p>Review your jewellery picks, check the order total, and continue shopping whenever you want to add more sparkle.</p>
+        </section>
+
+        <section class="cart-layout reveal">
+            <div class="cart-items" aria-label="Cart items">
+                <article class="cart-item">
+                    <div class="cart-art gold" aria-hidden="true"></div>
+                    <div class="cart-details">
+                        <h3>Aurelia Gold Ring</h3>
+                        <p>Polished gold finish with a timeless curve.</p>
+                        <span class="cart-meta">Size 7 / Gift wrap</span>
+                    </div>
+                    <div class="quantity-control" aria-label="Quantity">
+                        <button type="button">-</button>
+                        <span>1</span>
+                        <button type="button">+</button>
+                    </div>
+                    <p class="cart-price">$120</p>
+                </article>
+
+                <article class="cart-item">
+                    <div class="cart-art pearl" aria-hidden="true"></div>
+                    <div class="cart-details">
+                        <h3>Luna Pearl Necklace</h3>
+                        <p>Soft pearl glow for elegant evenings.</p>
+                        <span class="cart-meta">18 inch chain / Classic clasp</span>
+                    </div>
+                    <div class="quantity-control" aria-label="Quantity">
+                        <button type="button">-</button>
+                        <span>1</span>
+                        <button type="button">+</button>
+                    </div>
+                    <p class="cart-price">$180</p>
+                </article>
+            </div>
+
+            <aside class="cart-summary" aria-label="Order summary">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong>$300</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <strong>$12</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Estimated tax</span>
+                    <strong>$18</strong>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <strong>$330</strong>
+                </div>
+                <button type="button" class="checkout-button">Checkout</button>
+                <a href="{% url 'shop' %}" class="continue-link">Continue shopping</a>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Vengelico Jewellery. Crafted with elegance.</p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
