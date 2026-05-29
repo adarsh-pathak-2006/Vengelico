@@ -11,34 +11,15 @@
 
 <section class="section reveal">
     <div class="products large">
+        {% for p in products %}
         <article class="product">
-            <div class="product-art gold"></div>
-            <h3>Aurelia Gold Ring</h3>
-            <p>Polished gold ring with a clean silhouette.</p>
-            <p class="price">$120</p>
+            <img src="{{ p.image.url }}" alt="{{ p.name }}" height=200px>
+            <h3>{{p.name}}</h3>
+            <p>{{p.desc}}</p>
+            <p class="price">${{p.price}}</p>
             <button type="button">Add to Bag</button>
         </article>
-        <article class="product">
-            <div class="product-art pearl"></div>
-            <h3>Luna Pearl Necklace</h3>
-            <p>Delicate chain with a luminous pearl drop.</p>
-            <p class="price">$180</p>
-            <button type="button">Add to Bag</button>
-        </article>
-        <article class="product">
-            <div class="product-art silver"></div>
-            <h3>Serene Silver Bracelet</h3>
-            <p>Minimal bracelet made for daily styling.</p>
-            <p class="price">$95</p>
-            <button type="button">Add to Bag</button>
-        </article>
-        <article class="product">
-            <div class="product-art diamond"></div>
-            <h3>Celeste Diamond Earrings</h3>
-            <p>Elegant sparkle for dinners and celebrations.</p>
-            <p class="price">$250</p>
-            <button type="button">Add to Bag</button>
-        </article>
+        {% endfor %}
     </div>
 </section>
 {% endblock %}

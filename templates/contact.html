@@ -18,10 +18,11 @@
         <p>Hours: Monday to Saturday, 10 AM - 7 PM</p>
     </article>
 
-    <form id="contact-form" class="contact-form">
-        <input type="text" placeholder="Your name">
-        <input type="email" placeholder="Your email">
-        <textarea rows="5" placeholder="Your message"></textarea>
+    <form id="contact-form" class="contact-form" method="POST" action="{% url "submit" %}">
+        {% csrf_token %}
+        <input type="text" placeholder="Your name" name="name">
+        <input type="email" placeholder="Your email" name="email">
+        <textarea rows="5" placeholder="Your message" name="message"></textarea>
         <button type="submit">Send Message</button>
         <p class="form-message"></p>
     </form>

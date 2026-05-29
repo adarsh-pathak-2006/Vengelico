@@ -36,13 +36,3 @@ addButtons.forEach(function (button) {
         }, 1200);
     });
 });
-
-if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-        var formMessage = contactForm.querySelector(".form-message");
-
-        event.preventDefault();
-        formMessage.textContent = "Thank you. Vengelico will contact you soon.";
-        contactForm.reset();
-    });
-}
