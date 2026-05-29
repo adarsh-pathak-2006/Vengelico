@@ -25,3 +25,5 @@ def submit(request):
 
 def cart(request):
     return render(request, "cart.html")
+
+    
