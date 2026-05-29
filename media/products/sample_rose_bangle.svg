@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+  <rect width="600" height="420" fill="#fff1ee"/>
+  <circle cx="300" cy="198" r="116" fill="none" stroke="#a95656" stroke-width="28"/>
+  <circle cx="300" cy="198" r="70" fill="none" stroke="#f3c8bd" stroke-width="12"/>
+  <text x="300" y="365" fill="#171313" font-family="Georgia, serif" font-size="30" text-anchor="middle">Rose Bangle</text>
+</svg>

@@ -13,11 +13,14 @@
     <div class="products large">
         {% for p in products %}
         <article class="product">
-            <img src="{{ p.image.url }}" alt="{{ p.name }}" height=200px>
+            <img src="{{ p.image.url }}" alt="{{ p.name }}">
             <h3>{{p.name}}</h3>
             <p>{{p.desc}}</p>
             <p class="price">${{p.price}}</p>
-            <button type="button">Add to Bag</button>
+            <form action="{% url 'add_to_cart' p.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Add to Bag</button>
+            </form>
         </article>
         {% endfor %}
     </div>

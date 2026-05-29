@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+  <rect width="600" height="420" fill="#eef7ff"/>
+  <polygon points="224,130 274,190 224,250 174,190" fill="#ffffff" stroke="#9fb4cc" stroke-width="8"/>
+  <polygon points="376,130 426,190 376,250 326,190" fill="#ffffff" stroke="#9fb4cc" stroke-width="8"/>
+  <path d="M188 190 H260 M340 190 H412" stroke="#d6e6f5" stroke-width="5"/>
+  <text x="300" y="365" fill="#171313" font-family="Georgia, serif" font-size="30" text-anchor="middle">Diamond Studs</text>
+</svg>

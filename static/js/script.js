@@ -31,8 +31,5 @@ if ("IntersectionObserver" in window) {
 addButtons.forEach(function (button) {
     button.addEventListener("click", function () {
         button.textContent = "Added";
-        setTimeout(function () {
-            button.textContent = "Add to Bag";
-        }, 1200);
     });
 });
